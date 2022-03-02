@@ -17,6 +17,8 @@ number of local update steps: E=10,
 
 ![](http://latex.codecogs.com/svg.latex?\eta_g)=1,
 
+total number of clients: K=10,
+
 sampled num: |S|=5.
 
 # Usage
