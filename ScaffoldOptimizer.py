@@ -19,5 +19,5 @@ class ScaffoldOptimizer(Optimizer):
             for p, c, ci in zip(group['params'], server_controls.values(), client_controls.values()):
                 if p.grad is None:
                     continue
-                d_p = p.grad.data + c.data - ci.data
-                p.data = p.data - d_p.data * group['lr']
+                dp = p.grad.data + c.data - ci.data
+                p.data = p.data - dp.data * group['lr']

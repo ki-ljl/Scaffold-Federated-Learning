@@ -85,7 +85,7 @@ class Scaffold:
     def dispatch(self, index):
         for j in index:
             for old_params, new_params in zip(self.nns[j].parameters(), self.nn.parameters()):
-                new_params.data = old_params.data.clone()
+                old_params.data = new_params.data.clone()
 
     def client_update(self, index):  # update nn
         for k in index:
@@ -101,7 +101,7 @@ class Scaffold:
 
 
 if __name__ == '__main__':
-    K, C, E, B, r = 10, 0.5, 10, 50, 10
+    K, C, E, B, r = 10, 0.8, 10, 50, 10
     input_dim = 28
     lr = 0.01
     options = {'K': K, 'C': C, 'E': E, 'B': B, 'r': r, 'clients': clients_wind,
