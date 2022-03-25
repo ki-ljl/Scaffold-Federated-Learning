@@ -101,9 +101,9 @@ class Scaffold:
 
 
 if __name__ == '__main__':
-    K, C, E, B, r = 10, 0.8, 10, 50, 10
+    K, C, E, B, r = 10, 0.5, 10, 50, 10
     input_dim = 28
-    lr = 0.01
+    lr = 0.08
     options = {'K': K, 'C': C, 'E': E, 'B': B, 'r': r, 'clients': clients_wind,
                'input_dim': input_dim, 'lr': lr}
     scaffold = Scaffold(options)
