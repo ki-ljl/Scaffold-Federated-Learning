@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/SCAFFOLD-Federated%20Learning-blue)
+![](https://img.shields.io/badge/SCAFFOLD-Federated%20Learning-red)
 # Scaffold-Federated-Learning
 PyTorch implementation of SCAFFOLD (Stochastic Controlled Averaging for Federated Learning, ICML 2020).
 
