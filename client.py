@@ -47,7 +47,8 @@ def train(ann, server):
         temp[k] = v.data.clone()
 
     for k, v in x.named_parameters():
-        ann.control[k] = ann.control[k] - server.control[k] + (v.data - temp[k]) / (ann.E * ann.lr)
+        local_steps = ann.E * len(Dtr)
+        ann.control[k] = ann.control[k] - server.control[k] + (v.data - temp[k]) / (local_steps * ann.lr)
         ann.delta_y[k] = temp[k] - v.data
         ann.delta_control[k] = ann.control[k] - x.control[k]
 
