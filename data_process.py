@@ -45,6 +45,7 @@ class MyDataset(Dataset):
 def nn_seq_wind(file_name, B):
     """
     Processing data.
+
     :param file_name: csv file name
     :param B: batch size
     :return: DataLoader data
@@ -86,8 +87,8 @@ def nn_seq_wind(file_name, B):
 
 def get_mape(x, y):
     """
-    :param x:true value
-    :param y:pred value
-    :return:mape
+    :param x: true value
+    :param y: pred value
+    :return: mape
     """
     return np.mean(np.abs((x - y) / x))

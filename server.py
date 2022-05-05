@@ -18,7 +18,7 @@ from data_process import device, clients_wind
 from client import train, test
 
 
-# Implementation for Scaffold server
+# Implementation for Scaffold server.
 class Scaffold:
     def __init__(self, options):
         self.C = options['C']
