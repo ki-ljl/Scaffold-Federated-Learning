@@ -23,5 +23,5 @@ sampled num: |S|=5.
 
 # Usage
 ```
-python server.py
+python main.py
 ``` 
