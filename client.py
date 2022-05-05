@@ -40,7 +40,7 @@ def train(ann, server):
 
         print('epoch', epoch, ':', loss.item())
     # update c
-    # c+ <- ci - c + 1/(E * lr) * (x-yi)
+    # c+ <- ci - c + 1/(steps * lr) * (x-yi)
     # save ann
     temp = {}
     for k, v in ann.named_parameters():

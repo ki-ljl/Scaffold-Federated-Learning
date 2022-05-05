@@ -18,6 +18,7 @@ from data_process import device, clients_wind
 from client import train, test
 
 
+# Implementation for Scaffold server
 class Scaffold:
     def __init__(self, options):
         self.C = options['C']
@@ -30,7 +31,6 @@ class Scaffold:
         self.clients = options['clients']
         self.nn = ANN(input_dim=self.input_dim, name='server', B=self.B, E=self.E, lr=self.lr).to(
             device)
-        # self.control = torch.zeros_like(self.nn.named_parameters)
         for k, v in self.nn.named_parameters():
             self.nn.control[k] = torch.zeros_like(v.data)
             self.nn.delta_control[k] = torch.zeros_like(v.data)
@@ -100,12 +100,4 @@ class Scaffold:
             test(model)
 
 
-if __name__ == '__main__':
-    K, C, E, B, r = 10, 0.5, 10, 50, 10
-    input_dim = 28
-    lr = 0.08
-    options = {'K': K, 'C': C, 'E': E, 'B': B, 'r': r, 'clients': clients_wind,
-               'input_dim': input_dim, 'lr': lr}
-    scaffold = Scaffold(options)
-    scaffold.server()
-    scaffold.global_test()
+

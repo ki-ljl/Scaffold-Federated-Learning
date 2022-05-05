@@ -43,20 +43,24 @@ class MyDataset(Dataset):
 
 
 def nn_seq_wind(file_name, B):
-    # print('data processing...')
+    """
+    Processing data.
+    :param file_name: csv file name
+    :param B: batch size
+    :return: DataLoader data
+    """
     data = load_data(file_name)
     columns = data.columns
     wind = data[columns[2]]
     wind = wind.tolist()
     data = data.values.tolist()
-    X, Y = [], []
     seq = []
     for i in range(len(data) - 30):
         train_seq = []
         train_label = []
         for j in range(i, i + 24):
             train_seq.append(wind[j])
-
+        # add environmental factor
         for c in range(3, 7):
             train_seq.append(data[i + 24][c])
         train_label.append(wind[i + 24])
@@ -82,8 +86,8 @@ def nn_seq_wind(file_name, B):
 
 def get_mape(x, y):
     """
-    :param x:true
-    :param y:pred
-    :return:MAPE
+    :param x:true value
+    :param y:pred value
+    :return:mape
     """
     return np.mean(np.abs((x - y) / x))
