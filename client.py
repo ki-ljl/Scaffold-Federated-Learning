@@ -12,6 +12,7 @@ from itertools import chain
 import numpy as np
 import torch
 from sklearn.metrics import mean_absolute_error, mean_squared_error
+from torch.optim.lr_scheduler import StepLR
 
 sys.path.append('../')
 from torch import nn
@@ -28,6 +29,7 @@ def train(ann, server):
     loss = 0
     x = copy.deepcopy(ann)
     optimizer = ScaffoldOptimizer(ann.parameters(), lr=ann.lr, weight_decay=1e-4)
+    lr_step = StepLR(optimizer, step_size=10, gamma=0.1)
     for epoch in range(ann.E):
         for (seq, label) in Dtr:
             seq = seq.to(device)
@@ -37,6 +39,7 @@ def train(ann, server):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step(server.control, ann.control)
+            lr_step.step()
 
         print('epoch', epoch, ':', loss.item())
     # update c

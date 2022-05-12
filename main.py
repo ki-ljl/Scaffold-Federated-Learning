@@ -10,7 +10,7 @@ from server import Scaffold
 
 
 def main():
-    K, C, E, B, r = 10, 0.5, 10, 50, 10
+    K, C, E, B, r = 10, 0.5, 30, 50, 10
     input_dim = 28
     lr = 0.08
     options = {'K': K, 'C': C, 'E': E, 'B': B, 'r': r, 'clients': clients_wind,
