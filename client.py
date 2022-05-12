@@ -39,7 +39,7 @@ def train(ann, server):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step(server.control, ann.control)
-            lr_step.step()
+        lr_step.step()
 
         print('epoch', epoch, ':', loss.item())
     # update c

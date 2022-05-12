@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7ff08230-689d-4a74-bb28-f2cdc93e6fab" name="默认更改列表" comment="默认更改列表">
       <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,6 +189,7 @@
       <workItem from="1651756809025" duration="69000" />
       <workItem from="1651756963268" duration="6000" />
       <workItem from="1652369650472" duration="113000" />
+      <workItem from="1652370122173" duration="354000" />
     </task>
     <servers />
   </component>
@@ -211,7 +211,7 @@
     <SUITE FILE_PATH="coverage/Scaffold$Optimizer.coverage" NAME="Optimizer Coverage Results" MODIFIED="1646192604025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/optimizer" />
     <SUITE FILE_PATH="coverage/Scaffold$ScaffoldOptimizer.coverage" NAME="ScaffoldOptimizer Coverage Results" MODIFIED="1646192600283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/optimizer" />
     <SUITE FILE_PATH="coverage/Scaffold$server.coverage" NAME="server Coverage Results" MODIFIED="1651581846460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Scaffold$main.coverage" NAME="main Coverage Results" MODIFIED="1652369744616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Scaffold$main.coverage" NAME="main Coverage Results" MODIFIED="1652370456533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Scaffold$ScaffoldOptimizer__1_.coverage" NAME="ScaffoldOptimizer Coverage Results" MODIFIED="1646200042057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
