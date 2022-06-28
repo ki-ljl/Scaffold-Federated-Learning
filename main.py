@@ -5,7 +5,7 @@
 @File：main.py
 @Motto：Hungry And Humble
 """
-from data_process import clients_wind
+from get_data import clients_wind
 from server import Scaffold
 
 

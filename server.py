@@ -11,10 +11,11 @@ import sys
 
 import numpy as np
 import torch
+from tqdm import tqdm
 
 sys.path.append('../')
 from model import ANN
-from data_process import device, clients_wind
+from get_data import device, clients_wind
 from client import train, test
 
 
@@ -45,7 +46,7 @@ class Scaffold:
             self.nns.append(temp)
 
     def server(self):
-        for t in range(self.r):
+        for t in tqdm(range(self.r)):
             print('round', t + 1, ':')
             # sampling
             m = np.max([int(self.C * self.K), 1])
